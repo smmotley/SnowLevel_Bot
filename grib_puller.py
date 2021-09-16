@@ -3,10 +3,6 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 import matplotlib.pyplot as plt
 from datetime import datetime
-import geoviews as gv
-import geoviews.feature as gf
-from geoviews import dim, opts
-from geoviews.operation.regrid import regrid
 #import panel as pn
 
 class GRIB_DL():

@@ -1613,3 +1613,772 @@ Current Date And Time Is: 2021-02-18_0555 AM
 Starting...
 Current Date And Time Is: 2021-02-19_0555 AM 
 Starting...
+Current Date And Time Is: 2021-02-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-22_1128 AM 
+Starting...
+Python was not found but can be installed from the Microsoft Store: ms-windows-store://pdp/?productid=9NJ46SX7X90PCurrent Date And Time Is: 2021-02-22_1129 AM 
+Starting...
+syntax error, unexpected WORD_WORD, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
+context: <!DOCTYPE^ HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>502 Proxy Error</title></head><body><h1>Proxy Error</h1><p>The proxy server received an invalidresponse from an upstream server.<br />The proxy server could not handle the request <em><a href="/dods/gfs_0p25/gfs20210222/gfs_0p25_06z.dds">GET&nbsp;/dods/gfs_0p25/gfs20210222/gfs_0p25_06z.dds</a></em>.<p>Reason: <strong>DNS lookup failure for: vm-bldr-idpapp10.ncep.noaa.gov</strong></p></p></body></html>
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210222/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 292, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 29, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 41, in model_fz_level
+    sd = (ds.pull_point_data(lat=lat_mf, lon=lon_mf, variable='snodsfc', level='sfc')) * 39.37
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 33, in pull_point_data
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -70] NetCDF: DAP server error: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210222/gfs_0p25_06z'
+Current Date And Time Is: 2021-02-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-24_1023 AM 
+Starting...
+Python was not found but can be installed from the Microsoft Store: ms-windows-store://pdp/?productid=9NJ46SX7X90PCurrent Date And Time Is: 2021-02-24_1044 AM 
+Starting...
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 57, in model_fz_level
+    df = pd.concat([df_qpf, df_sd, df_snowlevel], axis=1)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\reshape\concat.py", line 255, in concat
+    sort=sort,
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\reshape\concat.py", line 428, in __init__
+    self.new_axes = self._get_new_axes()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\reshape\concat.py", line 497, in _get_new_axes
+    new_axes[i] = self._get_comb_axis(i)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\reshape\concat.py", line 529, in _get_comb_axis
+    self.objs, axis=data_axis, intersect=self.intersect, sort=self.sort
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\api.py", line 93, in _get_objs_combined_axis
+    return _get_combined_index(obs_idxes, intersect=intersect, sort=sort)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\api.py", line 140, in _get_combined_index
+    index = _union_indexes(indexes, sort=sort)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\api.py", line 203, in _union_indexes
+    return result.union_many(indexes[1:])
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\datetimes.py", line 554, in union_many
+    this = Index.union(this, other)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\base.py", line 2519, in union
+    return self._union(other, sort=sort)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\datetimes.py", line 520, in _union
+    result = Index._union(this, other, sort=sort)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\base.py", line 2568, in _union
+    indexer = self.get_indexer(other)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\pandas\core\indexes\base.py", line 2985, in get_indexer
+    "Reindexing only valid with uniquely" " valued Index objects"
+pandas.core.indexes.base.InvalidIndexError: Reindexing only valid with uniquely valued Index objects
+Current Date And Time Is: 2021-02-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-27_0555 AM 
+Starting...
+Current Date And Time Is: 2021-02-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-02_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-14_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-16_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-18_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-19_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-27_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-28_0555 AM 
+Starting...
+curl error details: 
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210328/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 50, in model_fz_level
+    hgt_500 = ds.pull_point_data(lat=lat_mf, lon=lon_mf, level=500.0, variable='hgtprs') / 10
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 33, in pull_point_data
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -68] NetCDF: I/O failure: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210328/gfs_0p25_06z'
+Current Date And Time Is: 2021-03-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-03-31_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-02_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-14_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-16_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-18_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-19_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-27_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-04-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-02_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-11_0555 AM 
+Starting...
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 54, in model_fz_level
+    snow_level = (((hgt_500 - hgt_1000) + tmp_700) * 128) - 64015
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\dataarray.py", line 2588, in func
+    self, other = align(self, other, join=align_type, copy=False)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\alignment.py", line 331, in align
+    new_obj = obj.reindex(copy=copy, fill_value=fill_value, **valid_indexers)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\dataarray.py", line 1300, in reindex
+    fill_value=fill_value,
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\dataset.py", line 2483, in reindex
+    **indexers_kwargs,
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\dataset.py", line 2514, in _reindex
+    sparse=sparse,
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\core\alignment.py", line 543, in reindex_variables
+    "index has duplicate values" % dim
+ValueError: cannot reindex or align along dimension 'time' because the index has duplicate values
+Current Date And Time Is: 2021-05-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-14_0555 AM 
+Starting...
+syntax error, unexpected $end, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
+context: ^
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210514/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 46, in model_fz_level
+    qpf = ((ds.pull_point_data(lat=lat_mf, lon=lon_mf, variable='apcpsfc', level='sfc')) * 0.03937)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 33, in pull_point_data
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -77] NetCDF: Access failure: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210514/gfs_0p25_06z'
+Current Date And Time Is: 2021-05-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-16_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-18_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-25_0555 AM 
+Starting...
+syntax error, unexpected $end, expecting SCAN_ATTR or SCAN_DATASET or SCAN_ERROR
+context: ^
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210525/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 46, in model_fz_level
+    qpf = ((ds.pull_point_data(lat=lat_mf, lon=lon_mf, variable='apcpsfc', level='sfc')) * 0.03937)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 33, in pull_point_data
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -77] NetCDF: Access failure: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210525/gfs_0p25_06z'
+Current Date And Time Is: 2021-05-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-05-31_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-14_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-16_0645 AM 
+Starting...
+Current Date And Time Is: 2021-06-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-18_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-19_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-27_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-06-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-02_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-16_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-18_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-19_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-20_0555 AM 
+Starting...
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210720/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 43, in model_fz_level
+    sd = (ds.pull_point_data(lat=lat_mf, lon=lon_mf, variable='snodsfc', level='sfc')) * 39.37
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 33, in pull_point_data
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -70] NetCDF: DAP server error: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210720/gfs_0p25_06z'
+Current Date And Time Is: 2021-07-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-26_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-27_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-07-31_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-02_0555 AM 
+Starting...
+curl error details: 
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210802/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 39, in model_fz_level
+    ds = GRIB_DL(model=model, model_resolution=model_res, date=date)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 23, in __init__
+    self.vtimes = self.valid_times()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 27, in valid_times
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -68] NetCDF: I/O failure: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210802/gfs_0p25_06z'
+Current Date And Time Is: 2021-08-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-13_0555 AM 
+Starting...
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210813/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 39, in model_fz_level
+    ds = GRIB_DL(model=model, model_resolution=model_res, date=date)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 23, in __init__
+    self.vtimes = self.valid_times()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 27, in valid_times
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -70] NetCDF: DAP server error: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210813/gfs_0p25_06z'
+Current Date And Time Is: 2021-08-14_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-16_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-17_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-19_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-20_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-21_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-22_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-23_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-24_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-25_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-27_0555 AM 
+Starting...
+curl error details: 
+Traceback (most recent call last):
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 198, in _acquire_with_cache_info
+    file = self._cache[self._key]
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\lru_cache.py", line 53, in __getitem__
+    value = self._cache[key]
+KeyError: [<class 'netCDF4._netCDF4.Dataset'>, ('https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210827/gfs_0p25_06z',), 'r', (('clobber', True), ('diskless', False), ('format', 'NETCDF4'), ('persist', False))]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 294, in <module>
+    main()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 31, in main
+    df = model_fz_level(model, lat_mf, lon_mf, today)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\snow_level_plotter.py", line 39, in model_fz_level
+    ds = GRIB_DL(model=model, model_resolution=model_res, date=date)
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 23, in __init__
+    self.vtimes = self.valid_times()
+  File "U:\Documents\Programming\PycharmProjects\Prod\SnowLevel_Bot\grib_puller.py", line 27, in valid_times
+    ds = xr.open_dataset(self.url)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\api.py", line 502, in open_dataset
+    filename_or_obj, group=group, lock=lock, **backend_kwargs
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 358, in open
+    return cls(manager, group=group, mode=mode, lock=lock, autoclose=autoclose)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 314, in __init__
+    self.format = self.ds.data_model
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 367, in ds
+    return self._acquire()
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\netCDF4_.py", line 361, in _acquire
+    with self._manager.acquire_context(needs_lock) as root:
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 186, in acquire_context
+    file, cached = self._acquire_with_cache_info(needs_lock)
+  File "C:\Users\smotley\AppData\Local\Continuum\anaconda3\envs\Data_Grabber\lib\site-packages\xarray\backends\file_manager.py", line 204, in _acquire_with_cache_info
+    file = self._opener(*self._args, **kwargs)
+  File "netCDF4\_netCDF4.pyx", line 2321, in netCDF4._netCDF4.Dataset.__init__
+  File "netCDF4\_netCDF4.pyx", line 1885, in netCDF4._netCDF4._ensure_nc_success
+OSError: [Errno -68] NetCDF: I/O failure: b'https://nomads.ncep.noaa.gov/dods/gfs_0p25/gfs20210827/gfs_0p25_06z'
+Current Date And Time Is: 2021-08-28_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-29_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-30_0555 AM 
+Starting...
+Current Date And Time Is: 2021-08-31_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-01_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-02_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-03_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-04_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-05_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-06_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-07_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-08_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-09_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-10_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-11_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-12_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-13_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-14_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-15_0555 AM 
+Starting...
+Current Date And Time Is: 2021-09-16_0555 AM 
+Starting...

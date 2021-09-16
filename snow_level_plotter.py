@@ -12,12 +12,15 @@ import matplotlib.colors as mcolors
 from matplotlib.patches import Polygon
 from pandas.plotting import register_matplotlib_converters
 import numpy as np
+import platform
 
 
 def main():
     register_matplotlib_converters()
     global imgdir
-    imgdir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Images'))
+    imgdir = os.path.join(os.path.sep, 'home', 'smotley', 'images', 'weather_email')
+    if platform.system() == 'Windows':
+        imgdir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Images'))
     #models = ['gfs', 'nam']
     models = ['gfs']
     today = datetime.today().strftime('%Y%m%d')
@@ -91,9 +94,8 @@ def create_plot(df, model):
     ax1.set_xlim([xaxis_lowlimit, xaxis_uplimit])
 
     ax1.set_ylabel('Snow Level', color=color)
-    ax1.set_xlabel('Date')
+    #ax1.set_xlabel('Date')
     ax1.set_ylim([0.0, 10000])
-
     #ax1.yaxis.grid(True)
 
     # --Start-- Create a color gradient under the curve
@@ -114,6 +116,8 @@ def create_plot(df, model):
     clip_path = Polygon(xy, facecolor='none', edgecolor='none', closed=True)
     ax1.add_patch(clip_path)
     im.set_clip_path(clip_path)
+    line = ax1.plot(mdates.date2num(df.index.values), df[f'snowLevel_{model}'], color=[0, 57/255, 148/255],
+                    label="Snow Level")
     # --End-- Color Gradient
 
     ax2 = ax1.twinx()
@@ -121,8 +125,10 @@ def create_plot(df, model):
     ax2.xaxis.set_major_formatter(date_format)
     color = 'tab:green'
     ax2.set_ylabel('QPF', color=color)
-    ax2.bar(daily_df.index, daily_df[f'qpf_hr_{model}'], color=color, alpha=0.7)
-    ax2.bar(daily_df.index, daily_df[f'snow_hr_{model}'], color='tab:blue', alpha=0.7)
+    qpf_bar = ax2.bar(daily_df.index, daily_df[f'qpf_hr_{model}'], color=color, alpha=0.7,
+            label="Total Precip")
+    sn_qpf_bar = ax2.bar(daily_df.index, daily_df[f'snow_hr_{model}'], color='tab:blue', alpha=0.7,
+            label="Amount of Total Precip Falling as Snow")
 
     rects = ax2.patches
     # Make some labels.
@@ -161,17 +167,37 @@ def create_plot(df, model):
     #ax1.xaxis.set_major_locator(ticker.MultipleLocator(xaxis_tick_spacing))
     ax1.patch.set_visible(False)  # hide the 'canvas'
     fig.autofmt_xdate()
-    ax1.tick_params(axis='x', rotation=45)
+    ax1.tick_params(axis='x', rotation=30)
 
+    # Get labels for the legend from both axis, then display legend at below the dates.
+    handles, labels = [], []
+    for ax in fig.axes:
+        for h, l in zip(*ax.get_legend_handles_labels()):
+            handles.append(h)
+            labels.append(l)
+
+    # Reorder the labels in legend as Total Precip, Snow, Snow Level.
+    myorder = [1,2,0]
+    handles = [handles[i] for i in myorder]
+    labels = [labels[i] for i in myorder]
+
+    # Give the bottom of the plot some extra room for the legend
+    fig.subplots_adjust(bottom=0.25)
+
+    # Add the legend to the plot
+    plt.legend(handles=handles, labels=labels, bbox_to_anchor=(1, 0), loc="lower right",
+               bbox_transform=fig.transFigure, frameon=False, ncol=3)
     plt.savefig(os.path.join(imgdir, 'qpf_graph.png'))
-    gradient_bar(df, xaxis_lowlimit, xaxis_uplimit)
-    #plt.show()
+
+    #gradient_bar(df, xaxis_lowlimit, xaxis_uplimit)
+    plt.show()
     return
 
 def gradient_fill(x, y, fill_color=None, ax=None, **kwargs):
     """
     Plot a line with a linear alpha gradient filled beneath it.
-
+    Adapted From:
+    https://stackoverflow.com/questions/29321835/is-it-possible-to-get-color-gradients-under-curve-in-matplotlib
     Parameters
     ----------
     x, y : array-like
